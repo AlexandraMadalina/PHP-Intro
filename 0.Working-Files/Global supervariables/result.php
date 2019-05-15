@@ -12,6 +12,7 @@
 
 <body>
 	<?php
+
 $method = $_SERVER['REQUEST_METHOD'];
 echo $method;
 
@@ -42,6 +43,7 @@ echo $method;
 			if($method == 'GET'){
 				echo '<li class="list-group-item">'.$_GET['country'].'</li>';
 			}else{
+				
 				echo "<li class=\"list-group-item\">{$_POST['show1']}</li>
 				<li class=\"list-group-item\">{$_POST['show2']}</li>
 				<li class=\"list-group-item\">{$_POST['show3']}</li>
@@ -69,7 +71,24 @@ echo $method;
 		</div>
 
 	</div>
-	
+	<?php
+	$list = "<table class=\"table w-25\">
+	<thead>
+    <tr>
+      <th scope=\"col\">Key</th>
+      <th scope=\"col\">Value</th>
+    </tr>
+  </thead>";
+	foreach($_REQUEST as $key=>$value){
+		$list.= "<tr> 
+				<td>$key</td>
+				<td>$value</td>
+				</tr>";
+		
+	}
+	$list.="</table>";
+	echo $list;
+	?>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
