@@ -14,8 +14,6 @@
 	<?php
 
 $method = $_SERVER['REQUEST_METHOD'];
-echo $method;
-
 ?>
 	<ul class="nav nav-tabs" id="myTab" role="tablist">
 		<li class="nav-item">
