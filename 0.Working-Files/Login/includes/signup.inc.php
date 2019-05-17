@@ -20,7 +20,7 @@ if(empty($username)||empty($useremail)||empty($password)||empty($passwordRepeat)
     header("Location: ../signup.php?error=invaliduid&mail=".$useremail);
     exit();
 }else if($password !== $passwordRepeat){
-    header("Location: ../signup.php?error=passwordcheckuid=".$username."mail=".$useremail);
+    header("Location: ../signup.php?error=passwordcheck&uid=".$username."&mail=".$useremail);
     exit();
 }else{
     $sql ="SELECT uiDUsers FROM users WHERE uiDUsers=?";

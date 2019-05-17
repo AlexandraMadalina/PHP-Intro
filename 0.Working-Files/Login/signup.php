@@ -3,7 +3,23 @@ require "header.php";
 ?>
 <main>
     <h1 class=" d-block w-25 p-2 bg-dark text-white text-center mx-auto">Signup</h1>
-  
+  <?php
+  if(isset($_GET['error'])){
+if($_GET['error'] == "emptyfields"){
+echo '<p class="d-block w-25 p-2 bg-danger text-white text-center mx-auto">Fill in all fields!</p>';
+}else if($_GET['error'] == "invalidmailuid"){
+    echo '<p class="d-block w-25 p-2 bg-danger text-white text-center mx-auto">Invalid username and e-mail!</p>';
+}else if($_GET['error'] == "invaliduid"){
+    echo '<p class="d-block w-25 p-2 bg-danger text-white text-center mx-auto">Invalid username!</p>';
+}else if($_GET['error'] == "invalidmail"){
+    echo '<p class="d-block w-25 p-2 bg-danger text-white text-center mx-auto">Invalid e-mail!</p>';
+}else if($_GET['error'] == "passwordcheck"){
+    echo '<p class="d-block w-25 p-2 bg-danger text-white text-center mx-auto">Your passwords do not match!</p>';
+}else if($_GET['error'] == "usertaken"){
+    echo '<p class="d-block w-25 p-2 bg-danger text-white text-center mx-auto">Username is already taken!</p>';
+}
+  }
+  ?>
     <form class="w-25 p-3 mx-auto" action="includes/signup.inc.php" method="post">
         <div class="form-group">
             <label for="username">Username</label>
