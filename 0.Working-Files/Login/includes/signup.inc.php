@@ -46,7 +46,7 @@ if(empty($username)||empty($useremail)||empty($password)||empty($passwordRepeat)
         $hashedPwd = password_hash($password, PASSWORD_DEFAULT);
         mysqli_stmt_bind_param($stmt, "sss", $username, $useremail, $hashedPwd);
         mysqli_stmt_execute($stmt);
-        header("Location: ../signup.php?signup=succes");
+        header("Location: ../signup.php?signup=success");
         exit();
         }
     }
