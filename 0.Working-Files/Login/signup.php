@@ -20,7 +20,7 @@ require "header.php";
     }
   }else if(isset($_GET['signup'])){
       if($_GET['signup'] == "success"){
-        echo '<p class="d-block w-25 p-2 bg-danger text-white text-center mx-auto">Signup succesful!</p>';
+        echo '<p class="d-block w-25 p-2 bg-success text-white text-center mx-auto">Signup succesful!</p>';
       }
     
   }
