@@ -15,4 +15,5 @@ $data = array(
     "second"=>"Snow",
     "age"=>30);
     echo $data[0]; // Outputs: Undefined offset: 0...
-
+    echo $data["first"]; //outputs: John
+```
