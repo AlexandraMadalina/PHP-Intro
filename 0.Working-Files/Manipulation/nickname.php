@@ -33,12 +33,23 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
     for($i=0; $i<count($rand_char); ++$i){
         array_push($letters,$alpha_numeric_chars[$rand_char[$i]]);
     }
-    $final_letters = implode("", $letters);
-
+ 
+    $pic_letter = array_rand($letters,1);
+    print_r($pic_letter);
+    print_r($letters);
+    if(ctype_alpha($letters[$pic_letter])){
+        $new_letter = $letters[$pic_letter];
+        if(ctype_lower($new_letter)){
+            $new_letter = strtoupper($new_letter);
+           
+        }else{
+            $new_letter = strtolower($new_letter);
+        }
+        $letters[$pic_letter] =  $new_letter;
+    }
+    $final_letters ="[".implode("][", $letters)."]";
     echo "<p class=\"d-block w-25 p-2 bg-info text-white text-center mx-auto\">x--{$final_letters}{$reverse}--</p>";
-   print_r($two_or_four[$rand_no_char]);
-   print_r($alpha_numeric_chars);
-    print_r($final_letters);
+ 
 }
 
 ?>
