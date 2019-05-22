@@ -35,8 +35,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
     }
  
     $pic_letter = array_rand($letters,1);
-    print_r($pic_letter);
-    print_r($letters);
+   
     if(ctype_alpha($letters[$pic_letter])){
         $new_letter = $letters[$pic_letter];
         if(ctype_lower($new_letter)){
@@ -47,12 +46,25 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
         }
         $letters[$pic_letter] =  $new_letter;
     }
-    $final_letters ="[".implode("][", $letters)."]";
-    echo "<p class=\"d-block w-25 p-2 bg-info text-white text-center mx-auto\">x--{$final_letters}{$reverse}--</p>";
+    $grad = 255/count($letters);
+    $red = $grad;
+    $colored_leters = array();
+    foreach($letters as $letter){
+        
+        $color_letter = "<span style=\"color: rgb({$red},0,255)\">{$letter}</span>";
+        $red += $grad;
+        array_push($colored_leters, $color_letter);
+        echo $color_letter."<br/>";
+        
+    }
+   
+    $final_letters ="[".implode("][", $colored_leters)."]";
+  
+    echo "<p class=\"d-block w-25 p-2 bg-light text-darck text-center mx-auto\">x--{$final_letters}{$reverse}--</p>";
  
 }
-
 ?>
+
     <script type="text/javascript">
         const input = document.getElementById('nickname');
         const button = document.querySelector("button");
