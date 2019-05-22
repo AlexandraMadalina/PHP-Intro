@@ -4,6 +4,15 @@ There are two kinds of arrays in PHP: indexed and associative. The keys of an in
 
 #### Indexed array
 ```
-data = array("John", "Snow",30);
-echo data[0]; //Outputs "John"
+$data = array("John", "Snow",30);
+echo $data[0]; //Outputs: "John"
 ```
+
+#### Associative arrays
+```
+$data = array(
+    "first"=>"John",
+    "second"=>"Snow",
+    "age"=>30);
+    echo $data[0]; // Outputs: Undefined offset: 0...
+
