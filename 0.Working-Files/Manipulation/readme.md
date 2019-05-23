@@ -15,5 +15,28 @@ $data = array(
     "second"=>"Snow",
     "age"=>30);
     echo $data[0]; // Outputs: Undefined offset: 0...
-    echo $data["first"]; //outputs: John
+    echo $data["first"]; //Outputs: John
+```
+
+#### Objects
+An array is simply an ordered map, that associate values to the keys. This map can be used as arrays, lists, hash table, dictionary, collection, stack, queue and much more. But after all it is a data structure, that holds data. You can iterate through it to get data and perform builtin array functions to achieve results.
+
+Object on the other hand is the physical manifestation of a class. A class is just a blue print, an object holds all the properties you defined in a class. It can have data members and member functions.
+
+```
+class Person{
+   public $first_name;
+   public $last_name;
+   public $age;
+   public function __construct($first, $second, $years){
+    $this->first_name = $first;
+    $this->last_name = $second;
+    $this->age = $years;
+   }
+
+}
+$data = new Person ("John", "Snow", "30");
+echo $data[0]; //Outputs: Fatal error: Uncaught Error: Cannot use object of type Person as array
+echo $data['first_name']; //Outputs: Fatal error: Uncaught Error: Cannot use object of type Person as array 
+echo $object->first_name; //Outputs: John
 ```

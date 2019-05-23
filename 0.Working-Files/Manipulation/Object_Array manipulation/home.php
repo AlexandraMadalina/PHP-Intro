@@ -18,6 +18,7 @@ class Person{
 
 }
 $object = new Person ("John", "Snow", "30");
+echo $object->first_name;
 $array1 = json_decode(json_encode($array));
 $all = [$array,$associative_array, $object];
 $added_by_loop = "I am added by loop";
