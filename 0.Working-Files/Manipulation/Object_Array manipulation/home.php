@@ -1,6 +1,6 @@
 <?php
 
-$array = array("John", "Snow", 30);
+$array = array("John", "Snow",30,);
 $associative_array = array(
 "first_name"=>"John",
 "last_name"=>"Snow",
@@ -37,6 +37,11 @@ foreach($all as $item){
         }else{
           echo "<span style=\"color:red\">Random key does not exist</span>";
         }
+       $last = end($item);
+       $key = key($item);
+       unset($item[$key]);
+          echo "<br/><br/><span style=\"color:red\">Associative array after removing the last element:</span>";
+        var_dump($item);
         
       }else if(is_object($item)){
       $item->added = $added_by_loop;
@@ -60,6 +65,16 @@ foreach($all as $item){
       }else{
         echo "<span style=\"color:red\">Random index does not exist</span>";
       }
+      if(count($item)>2 && count($item)%2==1){
+
+        $half_of_array = array_slice($item,0,(count($item)-1)/2);
+      }else if(count($item)>1){
+        $half_of_array = array_slice($item,0,count($item)/2);
+       
+      }
+      echo "<br/><br/><span style=\"color:red\">This is the sliced array:</span>";
+      var_dump($half_of_array);
+      
     }
 }
  
