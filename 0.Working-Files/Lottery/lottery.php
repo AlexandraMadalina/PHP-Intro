@@ -7,9 +7,10 @@ if(!empty($_POST['option'])){
     $user_choise = $_POST['option'];
     if( $user_choise == $luckyEmoji){
     $message = "Congratulation. You won!";
-     
+    echo "<p class=\"d-block w-50 p-2 bg-danger text-white text-center mx-auto\">{$message}</p>";
     }else{
       $message = "You lose!";
+      echo "<p class=\"d-block w-50 p-2 bg-danger text-white text-center mx-auto\">{$message}</p>";
     }
   
 }else{
@@ -37,15 +38,20 @@ if(!empty($_POST['option'])){
   <div class="container w-50 mx-auto">
     <div class="row">
       <div class="col text-center">
-        <h2>Your choise</h2>
+        <h2>Your choice</h2>
         <img src="<?php echo "Img/{$_POST['option']}.png"?>" alt="#">
       </div>
       <div class="col text-center">
-        <h2>Computer choise</h2>
+        <h2>Computer choice</h2>
         <img src="<?php echo "Img/{$luckyEmoji}.png"?>" alt="#">
       </div>
     </div>
   </div>
+  <form action="index.php" method="post">
+
+  <button type="submit" class="btn btn-secondary d-block mx-auto">Try again</button>
+  </form>
+  
 </body>
 
 </html>
