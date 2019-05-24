@@ -7,10 +7,10 @@ if(!empty($_POST['option'])){
     $user_choise = $_POST['option'];
     if( $user_choise == $luckyEmoji){
     $message = "Congratulation. You won!";
-    echo "<p class=\"d-block w-50 p-2 bg-danger text-white text-center mx-auto\">{$message}</p>";
+    
     }else{
       $message = "You lose!";
-      echo "<p class=\"d-block w-50 p-2 bg-danger text-white text-center mx-auto\">{$message}</p>";
+     
     }
   
 }else{

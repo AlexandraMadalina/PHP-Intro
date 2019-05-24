@@ -17,8 +17,8 @@ class Person{
    }
 
 }
-$object = new Person ("John", "Snow", "30");
-echo $object->first_name;
+$object = new Person ("Daenerys", "Targaryen", 33);
+
 $array1 = json_decode(json_encode($array));
 $all = [$array,$associative_array, $object];
 $added_by_loop = "I am added by loop";
@@ -57,12 +57,14 @@ foreach($all as $item){
         // echo "<span style=\"color:red\">Random index does not exist</span>";
       }
       if(count($item)>2 && count($item)%2==1){
-        $half_of_array = array_slice($item,0,(count($item)-1)/2);
+        $first_half = array_slice($item,0,(count($item)-1)/2);
+        $second_half = array_slice($item,(count($item)-1)/2);
       }else if(count($item)>1){
-        $half_of_array = array_slice($item,0,count($item)/2);
+        $first_half = array_slice($item,0,count($item)/2);
+        $second_half = array_slice($item,count($item)/2);
        
       }
-      // echo "<br/><br/><span style=\"color:red\">This is the sliced array:</span>";
+       // echo "<br/><br/><span style=\"color:red\">This is the sliced array:</span>";
          
     }
 }
@@ -73,14 +75,22 @@ function is_assoc($arr){
     return array_keys($arr) !== range(0, count($arr) - 1);
 }
 
-$object->arr1 = $array;
-$object->arr2 = $associative_array;
+$object->arr1 = $first_half;
+$object->arr2 = $second_half;
 foreach($associative_array as $key=>$value){
   $object->$key = $value;
   //echo "{$key} = {$value}";
 }
 $cookie = json_encode($object);
-setcookie("my_coockie",$cookie);
+ setcookie("my_coockie", $cookie, time() + 86400,'/');
+// time() - 3600
+//time() + (86400 * 30),'/'
+if(count($_COOKIE) > 0) {
+  echo "Cookies are enabled.";
+ 
+} else {
+  echo "Cookies are disabled.";
+}
 
 
 ?>
