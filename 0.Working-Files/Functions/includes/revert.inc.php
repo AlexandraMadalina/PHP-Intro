@@ -12,8 +12,8 @@ session_start();
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Functions</title>
 </head>
-<body class="p-3 mb-2 bg-dark">
-<div class="container bg-light rounded shadow py-5 px-5 centered">
+<body class="p-5 mb-2 bg-dark">
+<div class="container bg-light rounded shadow py-5 px-5 mt -5 centered">
   <div class="row">
  <?php foreach($_SESSION['revert'] as $element):?>
     <div class="col">
