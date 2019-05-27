@@ -1,3 +1,5 @@
+<?php session_start();?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +18,13 @@
             <button type="submit" class="btn btn-info mt-4" disabled>Info</button>
         </div>
     </form>
+    <?php
+    if(isset($_SESSION["nickname"])){
+        echo $_SESSION["nickname"];
+        session_unset();
+        session_destroy();
+    }
+    ?>
     <script type="text/javascript">
         const input = document.getElementById('nickname');
         const button = document.querySelector("button");

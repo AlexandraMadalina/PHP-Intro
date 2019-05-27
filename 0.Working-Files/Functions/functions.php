@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 function nickname_generate($nickname){
     $reverse =strrev(strtoupper(strrev($nickname)));
     $upper_letters = range(chr(65),chr(90));
@@ -39,10 +39,14 @@ function nickname_generate($nickname){
     $final_letters ="[".implode("][", $colored_leters)."]";
   
     $object = "<p class=\"d-block w-25 p-2 bg-light text-darck text-center mx-auto\">x--{$final_letters}{$reverse}--</p>";
-        echo $object;
+        return $object;
+}
+if(isset($_POST['username'])){
+    $_SESSION['nickname'] =  nickname_generate($_POST['username']);
+   header("Location: nickname.php");
+   exit();
 }
 
-nickname_generate($_POST['username']);
 
 function object_generate(){
 
@@ -51,7 +55,7 @@ function object_generate(){
 
 
 function object_revert($object){
-    session_start();
+   
     if($object !== object_generate()){
         $object = new stdClass();
         $object->roses = "red";
@@ -86,8 +90,8 @@ function object_revert($object){
     header("Location: includes/revert.inc.php");
  }
 
-object_revert($_COOKIE['my_coockie']);
-echo $_COOKIE['my_coockie'];
+// object_revert($_COOKIE['my_coockie']);
+// echo $_COOKIE['my_coockie'];
 // if(count($_COOKIE) > 0) {
 //     echo "Cookies are enabled.";
 //     var_dump($_COOKIE['my_coockie']);
