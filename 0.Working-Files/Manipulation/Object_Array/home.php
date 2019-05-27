@@ -108,7 +108,7 @@ $cookie = json_encode($object);
 <body class="bg-dark">
 <header>
         <nav class="navbar navbar-light bg-light mb-5">
-            <a class="navbar-brand" href="../Functions/security.php">
+            <a class="navbar-brand" href="../../Functions/security.php">
             <i class="fab fa-reddit fa-2x mr-5"></i>
                 Security
             </a>
