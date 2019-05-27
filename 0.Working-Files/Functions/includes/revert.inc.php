@@ -13,6 +13,14 @@ session_start();
     <title>Functions</title>
 </head>
 <body class="p-5 mb-2 bg-dark">
+<header>
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="security.php">
+                <i class="fab fa-reddit fa-2x mr-5"></i>
+                Security
+            </a>
+        </nav>
+    </header>
 <div class="container bg-light rounded shadow py-5 px-5 mt -5 centered">
   <div class="row">
  <?php foreach($_SESSION['revert'] as $element):?>

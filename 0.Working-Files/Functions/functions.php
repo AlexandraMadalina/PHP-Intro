@@ -89,7 +89,13 @@ function object_revert($object){
     $_SESSION['revert'] = array($revert_arr,  $assoc_arr, $object);
     header("Location: includes/revert.inc.php");
  }
-
+if(isset($_COOKIE['my_coockie'])){
+    object_revert($_COOKIE['my_coockie']);
+    exit();
+}else{
+    header("Location: home.php?error=generateobject");
+    exit();
+}
 // object_revert($_COOKIE['my_coockie']);
 // echo $_COOKIE['my_coockie'];
 // if(count($_COOKIE) > 0) {

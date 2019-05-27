@@ -85,12 +85,12 @@ $cookie = json_encode($object);
  setcookie("my_coockie", $cookie, time() + 86400,'/');
 // time() - 3600
 //time() + (86400 * 30),'/'
-if(count($_COOKIE) > 0) {
-  echo "Cookies are enabled.";
+// if(count($_COOKIE) > 0) {
+//   echo "Cookies are enabled.";
  
-} else {
-  echo "Cookies are disabled.";
-}
+// } else {
+//   echo "Cookies are disabled.";
+// }
 
 
 ?>
@@ -101,9 +101,19 @@ if(count($_COOKIE) > 0) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
   <title>Home</title>
 </head>
-<body class="p-3 mb-2 bg-dark">
+<body class="bg-dark">
+<header>
+        <nav class="navbar navbar-light bg-light mb-5">
+            <a class="navbar-brand" href="../Functions/security.php">
+            <i class="fab fa-reddit fa-2x mr-5"></i>
+                Security
+            </a>
+        </nav>
+    </header>
 <div class="container bg-light rounded shadow py-5 px-5 centered">
   <div class="row">
     <div class="col">
