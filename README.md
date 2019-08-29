@@ -14,4 +14,4 @@ The objective of this exercises is to learn the basics of PHP, one of the two mo
 2. [Loops in and out PHP](Working-Files/Loops)
 3. [Manipulation](Working-Files/Manipulation)
 4. [Functions](Working-Files/Functions)
-5. [Classes](Working-Files/Classes)
+5. [Objects](Working-Files/Objects)
