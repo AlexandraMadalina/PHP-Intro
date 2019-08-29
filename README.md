@@ -10,7 +10,7 @@ The objective of this exercises is to learn the basics of PHP, one of the two mo
 
 ## PHP Fundamentals
 
-1. [PHP Global supervariables](Working-Files/Global-Supervariables)
+1. [PHP Global supervariables](Working-Files/Global%20supervariables)
 2. [Loops in and out PHP](Working-Files/Loops)
 3. [Manipulation](Working-Files/Manipulation)
 4. [Functions](Working-Files/Functions)
