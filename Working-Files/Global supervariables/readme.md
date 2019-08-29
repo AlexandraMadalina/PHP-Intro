@@ -17,9 +17,10 @@ $_SESSION
 ## Description
 
 In this exercise we have to:
-send data using `$_POST` and `$_GET` from from `setup.php` to `result.php`. `$_POST` will send top 5 tv shows and top 5 movies. The `$_GET` will send the favourite country and the worst movie ever seen.
-  
- Loop through the data and post it in a table (as key => value).
+
+- end data using `$_POST` and `$_GET` from from `setup.php` to `result.php`. `$_POST` will send top 5 tv shows and top 5 movies. The `$_GET` will send the favourite country and the worst movie ever seen.
+
+- Loop through the data and post it in a table (as key => value).
 
 ## My approach
 
