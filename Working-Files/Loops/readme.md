@@ -23,3 +23,5 @@ To put the loops in something creative can make a lottery game.
 - When the player wins congratulate him and ask him if he wants to play again.
 - Choose one emoji that wins and two that lose
 - Here are the emoji's: 🍕🍔🍟
+
+The results are [here](https://lottery-php.herokuapp.com/)
