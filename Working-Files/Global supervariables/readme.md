@@ -25,3 +25,5 @@ In this exercise we have to:
 ## My approach
 
 In `setup.php` I started a session and created a forms that uses the post method and another that uses the get method. When the user submits the form in `result.php` I used `$_SESSION` variable to store to initialize 3 empty arrays. `$_SERVER['REQUEST_METHOD']` will check which form has been submitet. The results will be displayed with [bootstrap tabs](https://getbootstrap.com/docs/4.3/components/navs/#tabs).
+
+To loop through all the date I used the `$_REQUEST` variable.
